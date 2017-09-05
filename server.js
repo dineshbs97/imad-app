@@ -15,7 +15,7 @@ app.get('/article-two',function(req,res){
     res.send("please wait ...siva working to serve you");
 });
 app.get('/manoj',function(req,res){
-    res.send("<pr> Dinesh under processing </pr>");
+    res.send(" Dinesh under processing ");
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
