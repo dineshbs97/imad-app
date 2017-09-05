@@ -14,8 +14,8 @@ app.get('/article-one',function(req,res){
 app.get('/article-two',function(req,res){
     res.send("please wait ...siva working to serve you");
 });
-app.get('/article-three',function(req,res){
-    res.send("please wait ...Dinesh and siva working to serve you");
+app.get('/manoj',function(req,res){
+    res.send("<br> Dinesh under processing </br>");
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
