@@ -2,6 +2,7 @@ body {
     font-family: sans-serif;
     background-color: lightgrey;
     margin-top: 75px;
+    background-image: https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/13043757_1702570820013364_6791150037810427048_n.jpg?oh=b12df8bb29ff57cf0ed111b1f84e9304&oe=5A220086("bgdesert.jpg");
 }
 .center {
     text-align: center;
@@ -25,6 +26,3 @@ body {
                 padding-left:  30px;
                 padding-right: 30px;
             }
-body {
-    background-image: https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/13043757_1702570820013364_6791150037810427048_n.jpg?oh=b12df8bb29ff57cf0ed111b1f84e9304&oe=5A220086("bgdesert.jpg");
-}
