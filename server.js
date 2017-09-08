@@ -5,28 +5,31 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articles ={
+var articles = {
     'article-one':{
-    title: 'Thinking of Dinesh',
-    heading:'Memories',
-    date:'Sep8,2017',
-    content:    `
+        title: 'Thinking of Dinesh',
+        heading:'Memories',
+        date:'Sep8,2017',
+        content:    `
                        <p>
                           Yeah!!!!! I am Dinesh....I think i wasted my college life from the first two years ....I hope me to comeback to the world  with the fine skills to survive in the  racing  universe....
                        </p>`
 },
-    'article-two':{title: 'Trip to kerala',
-    heading:'Industrial visit to kerala',
-    date:'Nov12,2017',
-    content:    `
+    'article-two':{
+        title: 'Trip to kerala',
+        heading:'Industrial visit to kerala',
+        date:'Nov12,2017',
+        content:    `
                        <p>
                           A famous place to visit......Awaiting to Swim...
-                       </p>`},
+                       </p>`
+        
+    },
     'article-three':{
          title: 'Coffee day moments',
-    heading:'Hello friends.....',
-    date:'Dec 16,2017',
-    content:    `
+         heading:'Hello friends.....',
+         date:'Dec 16,2017',
+         content:    `
                        <p>
                           Pls dont order the Espresso inn the coffee day shop.. Because it is very large amount to drink.....Fuck OFF......
                        </p>`
@@ -72,9 +75,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/:articleName',function(req,res){
-    //articleName==article-one
-    //articles[articleName]=={} content object for article one
-    var articleName= req.params.articleName;
+    //articleName== article-one
+    //articles[articleName]== {} content object for article one
+    var articleName= res.params.articleName;
     res.send(createTemplate(articles[aricleName]));
 });
 app.get('/ui/style.css', function (req, res) {
