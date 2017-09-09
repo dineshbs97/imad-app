@@ -76,9 +76,9 @@ app.get('/', function (req, res) {
 });
 app.get('/:articleName',function(req,res){
     //articleName== article-one
-    //articles[articleName]== {} content object for article one
+    //articles[articleName]== {} content object for article-one
     var articleName= req.params.articleName;
-    res.send(createTemplate(articles[aricleName]));
+    res.send(createTemplate(articles(aricleName)));
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
