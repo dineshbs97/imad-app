@@ -33,9 +33,9 @@ var articles = {
                                                <p>
                                                   Pls dont order the Espresso inn the coffee day shop.. Because it is very large amount to drink.....Fuck OFF......
                                                </p>`
-                            },
+                            }
 };
-function createTemplate(data){
+function createTemplate (data) {
      var title= data.title;
      var heading= data.heading;
      var date = data.date;
@@ -74,7 +74,7 @@ function createTemplate(data){
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/:articleName',function(req,res){
+app.get(':/articleName',function(req,res){
     //articleName== article-one
     //articles[articleName]== {} content object for article-one
     var articleName= req.params.articleName;
