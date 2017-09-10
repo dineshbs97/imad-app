@@ -1,6 +1,4 @@
- 
  // Counter code
- 
  var button = document.getElementById('counter');
   
   button.onclick = function () {
@@ -9,8 +7,8 @@
       var request = new XMLHttpRequest();
       
       //Capture the request and store in a variable
-      request.onsteadystatechange = function () {
-                  if(request.readystate===XMLHttpRequest.Done){
+      request.onreadystatechange = function () {
+                  if(request.readystate===XMLHttpRequest.DONE){
                             //Take some action
                             if(request.status===200){
                                var counter = request.responseText;
@@ -18,8 +16,9 @@
                                span.innerHTML = counter.toString();
                             }
                         }
-            //Not yet Done
+            //Not  Done yet
           };
+          
       //Make the Request
       request.open('GET','http://dineshbs97.imad.hasura-app.io', true);
       request.send( null );
