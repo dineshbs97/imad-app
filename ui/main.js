@@ -2,17 +2,26 @@
  // counter code
  
  var button = document.getElementById('counter');
- var counter = 0;
   
   button.onclick = function () {
   
-      //make a request to the counter endpoint
+      //Create a request object
+      var request = new XMLHttpRequest();
       
       // capture the request and store in a variable
-      
-      //render the variable in the correct span
+      request.onsteadystatechange = function () {
+                  if(request.readystate===XMLHttpRequest.Done){
+                            //Take some action
+                            if(request.status===200){
+                               var counter = request.responseText;
+                               var span = document.getElementById('count');
+                               span.innerHTML = counter.toString();
+                            }
+                        }
+            //Not yet Done
+          };
+      //Make the Request
+      request.open("GET","http://dineshbs97.imad.hasura-app.io",True);
+      request.send( null );
     
-    counter = counter + 1;
-    var span = document.getElementById('count');
-   span.innerHTML = counter.toString();
   };
