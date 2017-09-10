@@ -1,6 +1,5 @@
  
- // counter code
- 
+ // Counter code
  var button = document.getElementById('counter');
   
   button.onclick = function () {
@@ -21,7 +20,7 @@
             //Not yet Done
           };
       //Make the Request
-      request.open("GET","http://dineshbs97.imad.hasura-app.io",True);
+      request.open('GET','http://dineshbs97.imad.hasura-app.io', true);
       request.send( null );
     
   };
