@@ -20,5 +20,5 @@ button.onclick = function () {
           
       //Make the Request
       request.open('GET','http://dineshbs97.imad.hasura-app.io', true);
-      request.send( null );
+      request.send(null);
   };
